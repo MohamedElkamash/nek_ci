@@ -48,7 +48,4 @@
     expression = 'if (rel_err < 4e-3, 1, 0)'
     pp_names = 'rel_err'
   []
-  [source_integral]
-    type = Receiver
-  []
 []
