@@ -1,0 +1,48 @@
+# --------------------------------------
+# Problem Parameters
+# --------------------------------------
+# Pr = 0.71
+# Ra = 1e3, 1e4, 1e5, 1e6
+# --------------------------------------
+# X = L (characteristic length)
+# U = alpha/L (characteristic velocity)
+# x_bar = x/X = x/L
+# u_bar = u/U = u*L/alpha
+# Pe = U*X/alpha = alpha/L * L/alpha = 1
+# Re = Pe / Pr = 1.4085
+# Ri = Ra * Pr / Pe^2 = 0.71 * Ra
+# --------------------------------------
+
+[OCCA]
+  backend = CPU
+
+[GENERAL]
+  polynomialOrder = 3
+  dt = targetCFL=2.0 + initial=1e-6
+  stopAt = endTime
+  endTime = 1
+  writeControl = simulationTime
+  writeInterval = 1
+
+
+[PRESSURE]
+  residualTol = 1e-06
+
+[VELOCITY]
+  boundaryTypeMap = w, w, symy, symy, w, w
+  residualTol = 1e-07
+  density = 1
+  viscosity = -1.4085
+
+[TEMPERATURE]
+  boundaryTypeMap = t, t, I, I, I, I  
+  residualTol = 1e-07
+  rhoCp = 1
+  conductivity = -1
+
+[CASEDATA]
+  Pr = 0.71
+  Ra = 1e3
+  Ri = 0.71e3
+  T_cold = 0
+  T_hot = 1
