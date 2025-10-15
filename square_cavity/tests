@@ -4,6 +4,7 @@
     input = nek.i
     csvdiff = nek_out.csv
     rel_err=1e-5
+    heavy = true
     requirement = 'The system shall be able to solve laminar natural convection in 2D square cavity'
     capabilities = 'nekrs'
     max_time = 3600
