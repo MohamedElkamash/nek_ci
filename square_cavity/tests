@@ -7,7 +7,6 @@
     heavy = true
     requirement = 'The system shall be able to solve laminar natural convection in 2D square cavity'
     capabilities = 'nekrs'
-    max_time = 3600
     min_parallel = 8
   []
 []
