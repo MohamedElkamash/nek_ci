@@ -9,33 +9,6 @@ mesh_width = 0.0193145
 [Problem]
   type = NekRSProblem
   casename = 'cavity'
-  [FieldTransfers]
-    [T]
-      type = NekFieldVariable
-      direction = from_nek
-      field = temperature
-    []
-    [P]
-      type = NekFieldVariable
-      direction = from_nek
-      field = pressure
-    []
-    [vel_x]
-      type = NekFieldVariable
-      direction = from_nek
-      field = velocity_x
-    []
-    [vel_y]
-      type = NekFieldVariable
-      direction = from_nek
-      field = velocity_y
-    []
-    [vel_z]
-      type = NekFieldVariable
-      direction = from_nek
-      field = velocity_z
-    []
-  []
 []
 
 [Executioner]
